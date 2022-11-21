@@ -1,29 +1,29 @@
-﻿namespace LogicalPrograms
+﻿using LogicalPrograms;
+using static LogicalPrograms.FibonacciSeries;
+
+namespace LogicalProgramms
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            bool flag = true;
-            while (flag)
+            while (true)
             {
-                Console.WriteLine("Welcome to Logical Programming Problems");
-                Console.WriteLine("1. Fibonaccis Series" + "\n" +" ");
-                int check = Convert.ToInt32(Console.ReadLine());
-                switch (check)
+                Console.WriteLine("\nselect Program\n 1.FibonacciSeries\n 2.Prime No");
+                int option = Convert.ToInt32(Console.ReadLine());
+                switch (option)
                 {
                     case 1:
-                        FibonacciSeries fibo = new FibonacciSeries();
-                        fibo.Print(20);
+                        FibonacciSeries series = new FibonacciSeries();
+                        series.Print(12);
                         break;
-                    default:
-                        flag = false;
+                    case 3:
+                        PrimeNumber primeNo = new PrimeNumber();
+                        primeNo.CheckPrime(10);
                         break;
                 }
             }
+
         }
     }
 }
-
-        
-    
