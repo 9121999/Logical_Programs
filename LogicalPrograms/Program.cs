@@ -10,7 +10,7 @@ namespace LogicalProgramms
         {
             while (true)
             {
-                Console.WriteLine("\nselect Program\n 1.FibonacciSeries\n 2.Prime No \n 3.CouponNumber \n 4.MonthlyPayment \n 5.ReverseNumber \n 6.StopWatch");
+                Console.WriteLine("\nselect Program\n 1.FibonacciSeries\n 2.Prime No \n 3.CouponNumber \n 4.MonthlyPayment \n 5.ReverseNumber \n 6.StopWatch \n 7.TempConversion");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -38,6 +38,10 @@ namespace LogicalProgramms
                         StopWatch watch= new StopWatch();
                         watch.calElapsedTime();
                         break;
+                    case 7:
+                        TempConversion temp = new TempConversion();
+                        temp.Conversion();
+                            break;
 
 
                 }
