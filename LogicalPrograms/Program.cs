@@ -9,7 +9,7 @@ namespace LogicalProgramms
         {
             while (true)
             {
-                Console.WriteLine("\nselect Program\n 1.FibonacciSeries\n 2.Prime No");
+                Console.WriteLine("\nselect Program\n 1.FibonacciSeries\n 2.Prime No \n 3.CouponNumber");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -17,9 +17,13 @@ namespace LogicalProgramms
                         FibonacciSeries series = new FibonacciSeries();
                         series.Print(12);
                         break;
-                    case 3:
+                    case 2:
                         PrimeNumber primeNo = new PrimeNumber();
-                        primeNo.CheckPrime(10);
+                        primeNo.CheckPrime(2);
+                        break;
+                    case 3:
+                        CouponNum coupen = new CouponNum();
+                        coupen.CouponNumber();
                         break;
                 }
             }
