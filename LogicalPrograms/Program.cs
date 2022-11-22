@@ -10,7 +10,7 @@ namespace LogicalProgramms
         {
             while (true)
             {
-                Console.WriteLine("\nselect Program\n 1.FibonacciSeries\n 2.Prime No \n 3.CouponNumber \n 4.MonthlyPayment");
+                Console.WriteLine("\nselect Program\n 1.FibonacciSeries\n 2.Prime No \n 3.CouponNumber \n 4.MonthlyPayment \n 5.ReverseNumber");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -30,6 +30,11 @@ namespace LogicalProgramms
                         MonthlyPayment monthly = new MonthlyPayment();
                         monthly.Payment();
                         break;
+                    case 5:
+                        ReverseNo rev = new ReverseNo();
+                        rev.NumberCheck();
+                        break;
+
                 }
             }
 
