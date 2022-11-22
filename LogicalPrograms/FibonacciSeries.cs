@@ -72,7 +72,28 @@ namespace LogicalPrograms
                     }
                 }
             }
+                internal class MonthlyPayment
+                { 
+                double P, V, J, n, r, payment;
+                public void Payment()
+                {
+                    Console.WriteLine("Enter principle amount", P);
+                    P = Convert.ToDouble(Console.ReadLine());
+                    Console.WriteLine("Enter number of year", V);
+                    V = Convert.ToDouble(Console.ReadLine());
+                    Console.WriteLine("Enter rate of interest", J);
+                    J = Convert.ToDouble(Console.ReadLine());
+                    n = (12 * V);
+                    Console.WriteLine("Number: " + n);
+                    r = J / (12 * 100);
+                    Console.WriteLine("rate: " + r);
+                    payment = ((P * r) / (1 - Math.Pow(1 + r, -n)));
+                    Console.WriteLine("Monthly Payment: " + payment);
+               
+                }
+            }
         }
     }
 }
+        
    
