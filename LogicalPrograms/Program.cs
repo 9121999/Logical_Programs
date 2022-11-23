@@ -1,6 +1,8 @@
 ﻿using LogicalPrograms;
 using static LogicalPrograms.FibonacciSeries;
 using static LogicalPrograms.FibonacciSeries.CouponNum;
+using static LogicalPrograms.FibonacciSeries.TempConversion;
+using static LogicalPrograms.FibonacciSeries.TempConversion.DayOfWeeks;
 
 namespace LogicalProgramms
 {
@@ -10,7 +12,7 @@ namespace LogicalProgramms
         {
             while (true)
             {
-                Console.WriteLine("\nselect Program\n 1.FibonacciSeries\n 2.Prime No \n 3.CouponNumber \n 4.MonthlyPayment \n 5.ReverseNumber \n 6.StopWatch \n 7.TempConversion");
+                Console.WriteLine("\nselect Program\n 1.FibonacciSeries\n 2.Prime No \n 3.CouponNumber \n 4.MonthlyPayment \n 5.ReverseNumber \n 6.StopWatch \n 7.TempConversion \n 8.WeekDay");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -42,7 +44,10 @@ namespace LogicalProgramms
                         TempConversion temp = new TempConversion();
                         temp.Conversion();
                             break;
-
+                    case 8:
+                        WeekDay day = new WeekDay();
+                        day.CalDay();
+                        break;
 
                 }
             }

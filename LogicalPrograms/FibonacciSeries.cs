@@ -73,8 +73,8 @@ namespace LogicalPrograms
                     }
                 }
             }
-                internal class MonthlyPayment
-                { 
+            internal class MonthlyPayment
+            {
                 double P, V, J, n, r, payment;
                 public void Payment()
                 {
@@ -90,7 +90,7 @@ namespace LogicalPrograms
                     Console.WriteLine("rate: " + r);
                     payment = ((P * r) / (1 - Math.Pow(1 + r, -n)));
                     Console.WriteLine("Monthly Payment: " + payment);
-               
+
                 }
             }
         }
@@ -110,7 +110,7 @@ namespace LogicalPrograms
                 Console.WriteLine(revNum);
             }
         }
-        internal class StopWatch
+        public class StopWatch
         {
             public void calElapsedTime()
             {
@@ -134,7 +134,7 @@ namespace LogicalPrograms
             }
 
         }
-        internal class TempConversion
+        public class TempConversion
         {
             double f, c;
             public void Conversion()
@@ -160,10 +160,80 @@ namespace LogicalPrograms
                         break;
                 }
             }
+            internal class DayOfWeeks
+            {
+                public static void dayOfWeeks()
+                {
+                    Console.Write("Enter the months : ");
+                    int m = Convert.ToInt32(Console.ReadLine());
+                    Console.Write("Enter the days : ");
+                    int d = Convert.ToInt32(Console.ReadLine());
+                    Console.Write("Enter the year : ");
+                    int y = Convert.ToInt32(Console.ReadLine());
+                    int y0 = y - (14 - m) / 12;
+                    int x = y0 + y0 / 4 - y0 / 100 + y0 / 400;
+                    int m0 = m + 12 * ((14 - m) / 12) - 2;
+                    int d0 = (d + x + (31 * m0) / 12) % 7;
+                    switch (d0)
+                    {
+                        case 0:
+                            Console.WriteLine("Sunday");
+                            break;
+                        case 1:
+                            Console.WriteLine("Monday");
+                            break;
+                        case 2:
+                            Console.WriteLine("Tuesday");
+                            break;
+                        case 3:
+                            Console.WriteLine("Wednesday");
+                            break;
+                        case 4:
+                            Console.WriteLine("Thursday");
+                            break;
+                        case 5:
+                            Console.WriteLine("Friday");
+                            break;
+                        case 6:
+                            Console.WriteLine("Saturday");
+                            break;
+                    }
+                }
+                internal class WeekDay
+                {
+                    int day, month, year;
+
+                    public void CalDay()
+                    {
+
+                        int x, days, months, years;
+                        Console.Write("\n");
+                        Console.Write("To Print Day Of Week:\n");
+                        Console.Write("\n");
+                        Console.WriteLine("Please Enter the Date");
+                        day = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Please Enter the Month");
+                        month = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Please Enter the Year");
+                        year = Convert.ToInt32(Console.ReadLine());
+
+                        years = year - (14 - month) / 12;
+                        x = years + years / 4 - years / 100 + years / 400;
+                        months = month + 12 * ((14 - month) / 12) - 2;
+                        days = (day + x + 31 * months / 12) % 7;
+                        Console.WriteLine("Calculate the day as per: \n Monday = 1 \n Tuesday = 2 \n Wednesday = 3 \n Thursday = 4 \n Friday = 5 \n Saturday = 6 \n Sunday = 0");
+                        Console.WriteLine(days + " is the day of the Week that date Falls On " + day + "/" + month + "/" + year + ".");
+                    }
+                }
+            }
         }
     }
-
 }
+        
+
+       
+
+
 
 
 
