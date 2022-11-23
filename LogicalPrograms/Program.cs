@@ -12,7 +12,7 @@ namespace LogicalProgramms
         {
             while (true)
             {
-                Console.WriteLine("\nselect Program\n 1.FibonacciSeries\n 2.Prime No \n 3.CouponNumber \n 4.MonthlyPayment \n 5.ReverseNumber \n 6.StopWatch \n 7.TempConversion \n 8.WeekDay");
+                Console.WriteLine("\nselect Program\n 1.FibonacciSeries\n 2.Prime No \n 3.CouponNumber \n 4.MonthlyPayment \n 5.ReverseNumber \n 6.StopWatch \n 7.TempConversion \n 8.WeekDay \n 9.PerfectNumber");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -47,6 +47,10 @@ namespace LogicalProgramms
                     case 8:
                         WeekDay day = new WeekDay();
                         day.CalDay();
+                        break;
+                    case 9:
+                        PerfectNo perfect = new PerfectNo();
+                        perfect.Perfect(); 
                         break;
 
                 }
